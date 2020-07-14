@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Hypixel Stats Bot</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" href="./images/image4.png" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<!-- <div class="logo">
+							<span class="icon fa-gem"></span>
+						</div> -->
+						<div class="content">
+							<div class="inner">
+								<h1>Hypixel Stats Bot</h1>
+								<p>An unofficial Hypixel stats bot that shows user's and guild's statistics and much more!</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+                <li><a href="#whyUs">Why us</a></li>
+                <li><a href="#commands">Commands</a></li>
+                <li><a href="#about">About</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Commands -->
+							<article id="commands">
+								<h2 class="major">Commands</h2>
+								<span class="image main"><img src="./images/HypixelBanner.png" alt="" /></span>
+                <p>Note: <em>h!</em> is the default prefix, and it can be changed if you want. If you don't know the prefix in x server, just ping the bot!</p>
+                <h4 class="major">Miscellaneous / Admin</h4>
+                <div class="table-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Usage & Aliases</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>botstats</td>
+                        <td>Returns some bot's information</td>
+                        <td>h!<em>botstats</em></br>bs | botstat</td>
+                      </tr>
+                      <tr>
+                        <td>setprefix</td>
+                        <td>Change the bot's prefix (works with whitelisted roles (check below) and users with ADMINISTRATOR permission.)</td>
+                        <td>h!<em>setprefix</em> newprefix </br>prefix | setprefix</td>
+                      </tr>
+                      <tr>
+                        <td>ignore</td>
+                        <td>Toggle the use of commands in certain channels (works only with whitelisted roles (check below) and users with the ADMINISTRATOR permission)</td>
+                        <td>h!<em>ignore</em> #channel</td>
+                      </tr>
+                      <tr>
+                        <td>whitelist</td>
+                        <td>Toggle roles allowed to change prefix and ignore channels (only users with ADMINISTRATOR permission can use this command)</td>
+                        <td>h!<em>whitelist</em> @role</td>
+                      </tr>
+                      <tr>
+                        <td>help</td>
+                        <td>Sends a list of all the commands</td>
+                        <td>h!<em>help</em></td>
+                      </tr>
+                      <tr>
+                        <td>stats</td>
+                        <td>Sends a list of all the Hypixel stats commands</td>
+                        <td>h!<em>stats</em></td>
+                      </tr>
+                      <tr>
+                        <td>invite</td>
+                        <td>Sends an invitation link to add the bot to your servers</td>
+                        <td>h!<em>invite</em></td>
+                      </tr>
+                      <tr>
+                        <td>support</td>
+                        <td>Sends an invitation link to join the support server</td>
+                        <td>h!<em>support</em></td>
+                      </tr>
+                      <tr>
+                        <td>suggestion</td>
+                        <td>Send a suggestion or report an error you found!</td>
+                        <td>h!<em>suggestion</em> (SUGGESTION)</br>suggestion | suggest</td>
+                      </tr>
+                      <tr>
+                        <td>upvote</td>
+                        <td>Vote for us!</td>
+                        <td>h!<em>upvote</em></br>upvote | vote</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h4 class="major">Vanilla Minecraft Commands</h4>
+                <div class="table-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Usage & Aliases</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>available</td>
+                        <td>Checks if a username is already taken!</td>
+                        <td>h!<em>available</em> username</td>
+                      </tr>
+                      <tr>
+                        <td>cape</td>
+                        <td>Show someone's Optifine or Mojang cape (Usernames must be case-sensitive. Will send only one cape. Prioritizes Mojang capes over Optifine.)</td>
+                        <td>h!<em>cape</em> username</td>
+                      </tr>
+                      <tr>
+                        <td>head</td>
+                        <td>Show someone's head and the command to get it in-game!</td>
+                        <td>h!<em>head</em> username</td>
+                      </tr>
+                      <tr>
+                        <td>history</td>
+                        <td>Show someone's username change history!</td>
+                        <td>h!<em>history</em> username</td>
+                      </tr>
+                      <tr>
+                        <td>server</td>
+                        <td>Show basic info of a server</td>
+                        <td>h!<em>server</em> serverAddress</br>sv | si | server</td>
+                      </tr>
+                      <tr>
+                        <td>skin</td>
+                        <td>Steal someone's skin!</td>
+                        <td>h!<em>skin</em> username</td>
+                      </tr>
+                      <tr>
+                        <td>uuid</td>
+                        <td>Get someone's unique identifier!</td>
+                        <td>h!<em>uuid</em> username</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h4 class="major">Hypixel Guild Commands</h4>
+                <div class="table-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Usage & Aliases</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>daily</td>
+                        <td>Guild's Daily GXP Earners leaderboard</td>
+                        <td>h!<em>daily</em> guildname (or -p username)</br>daily</td>
+                      </tr>
+                      <tr>
+                        <td>guild</td>
+                        <td>Guild's basic stats</td>
+                        <td>h!<em>guild</em> guildname (or -p username)</br>guild | guilds</td>
+                      </tr>
+                      <tr>
+                        <td>guildcompare</td>
+                        <td>Compare two guild's basic stats</td>
+                        <td>h!<em>guildcompare</em> guildname, guildname</br>guildcompare | gc</td>
+                      </tr>
+                      <tr>
+                        <td>weekly</td>
+                        <td>Guild's Weekly GXP Earners leaderboard</td>
+                        <td>h!<em>weekly</em> guildname (or -p username)</br>weekly</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h4 class="major">Hypixel Player Commands</h4>
+                <div class="table-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Usage & Aliases</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- <tr>
+                        <td>available</td>
+                        <td>Checks if a username is already taken!</td>
+                        <td><em>h!</em>available username</td>
+                      </tr> -->
+                      <tr>
+                        <td>hypixel</td>
+                        <td>Sends back user's network profile and guild member statistics</td>
+                        <td>
+                          h!<em>h</em> username</br>hypixel | n | h | network
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>friends</td>
+                        <td>Player's Friend list</td>
+                        <td>h!<em>friends</em> username</br>fl | friendlist | friends</td>
+                      </tr>
+                      <tr>
+                        <td>arcade</td>
+                        <td>Player's arcade stats</td>
+                        <td>h!<em>arcade</em> username</br>arcade</td>
+                      </tr>
+                      <tr>
+                        <td>blitz</td>
+                        <td>Player's Blitz Survival Games stats</td>
+                        <td>h!<em>hg</em> username</br>hg | blitz | hungergames</td>
+                      </tr>
+                      <tr>
+                        <td>buildbattle</td>
+                        <td>Player's Build Battle stats</td>
+                        <td>h!<em>buildbattle</em> username</br>bb | buildbattle</td>
+                      </tr>
+                      <tr>
+                        <td>bedwars</td>
+                        <td>Player's Bedwars stats</td>
+                        <td>h!<em>bedwars</em> username</br>bw | bedwars | bedwar</td>
+                      </tr>
+                      <tr>
+                        <td>copsncrims</td>
+                        <td>Player's Cops and Criminals stats</td>
+                        <td>h!<em>copsncrims</em> username</br>cc | copsncrims</td>
+                      </tr>
+                      <tr>
+                        <td>crazywalls</td>
+                        <td>Player's Crazy Walls stats</td>
+                        <td>h!<em>crazywalls</em> username</br>cw | crazywalls</td>
+                      </tr>
+                      <tr>
+                        <td>duels</td>
+                        <td>Player's Overall Duels stats (see below for game-specific (WIP))</td>
+                        <td>h!<em>buildbattle</em> username</br>bb | buildbattle</td>
+                      </tr>
+                      <!-- <tr>
+                        <td>bridges</td>
+                        <td>Player's Build Battle stats</td>
+                        <td>h!<em>buildbattle</em> username</br>bb | buildbattle</td>
+                      </tr> overall, uhc, sw, megawalls, op, blitz, classic, bow, speed, combo, bridges, sumo -->
+                      <tr>
+                        <td>megawalls</td>
+                        <td>Player's Mega Walls stats</td>
+                        <td>h!<em>megawalls</em> username</br>mw | megawalls</td>
+                      </tr>
+                      <tr>
+                        <td>member</td>
+                        <td>Player's in-guild stats</td>
+                        <td>h!<em>member</em> username</br>member</td>
+                      </tr>
+                      <tr>
+                        <td>murdermystery</td>
+                        <td>Player's Build Battle stats</td>
+                        <td>h!<em>murdermystery</em> username</br>mm | murdermystery</td>
+                      </tr>
+                      <tr>
+                        <td>paintball</td>
+                        <td>Player's Paintball stats</td>
+                        <td>h!<em>paintball</em> username</br>pb | paintballwarfare | pw | paintball</td>
+                      </tr>
+                      <tr>
+                        <td>quake</td>
+                        <td>Player's Quake stats</td>
+                        <td>h!<em>quake</em> username</br>quake</td>
+                      </tr>
+                      <tr>
+                        <td>skyblock</td>
+                        <td>Player's Skyblock stats</td>
+                        <td>h!<em>skyblock</em> username</br>sb | skyblock</td>
+                      </tr>
+                      <tr>
+                        <td>skyclash</td>
+                        <td>Player's Skyclash stats</td>
+                        <td>h!<em>skyclash</em> username</br>sc | skyclash</td>
+                      </tr>
+                      <tr>
+                        <td>smashheroes</td>
+                        <td>Player's Super Smash Heroes stats</td>
+                        <td>h!<em>smashheroes</em> username</br>sh | smashheroes</td>
+                      </tr>
+                      <tr>
+                        <td>speeduhc</td>
+                        <td>Player's Mega Walls stats</td>
+                        <td>h!<em>speeduhc</em> username</br>speeduhc</td>
+                      </tr>
+                      <tr>
+                        <td>skywars</td>
+                        <td>Player's Skywars stats</td>
+                        <td>h!<em>skywars</em> username</br>sw | skywars | skywar</td>
+                      </tr>
+                      <tr>
+                        <td>thepit</td>
+                        <td>Player's Pit stats</td>
+                        <td>h!<em>thepit</em> username</br>pit | thepit</td>
+                      </tr>
+                      <tr>
+                        <td>tntgames</td>
+                        <td>Player's TNT Games stats</td>
+                        <td>h!<em>tntgames</em> username</br>tnt | tntgames</td>
+                      </tr>
+                      <tr>
+                        <td>thewalls</td>
+                        <td>Player's The Walls stats</td>
+                        <td>h!<em>thewalls</em> username</br>walls | thewalls</td>
+                      </tr>
+                      <tr>
+                        <td>vampirez</td>
+                        <td>Player's VampireZ stats</td>
+                        <td>h!<em>vampirez</em> username</br>vampirez</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+							</article>
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<span class="image main"><img src="./images/HypixelBanner.png" alt="" /></span>
+								<p>
+                  Hey there! As you may have noticed, this is the webpage for a Discord Bot whose intended use is directed towards Minecraft Players with some special features for Hypixel players as well. 
+                  This bot was developed using discord.js v12.2.0, and development began late June of 2020 amid the COVID-19 pandemic. The bot has been built upon the commands that Hypixel Bot (developed by Ice) had.
+                  Due to its discontinuation, I decided to build one myself. 
+                </p>
+              </article>
+              
+            <!-- Why Us -->
+            <article id="whyUs">
+              <h2 class="major">Why Hypixel Stats</h2>
+              <span class="image main"><img src="./images/HypixelBanner.png" alt="" /></span>
+              <p>
+                · Hypixel Stats has been developed on discord.js v12.2.0, which maximizes customizability, making it much easier to add new commands and debug others (in case there are errors). </br>
+                · The bot has been designed to be user-friendly, mainly focused on making numbers easier to see and shortening response times.</br>
+                · Our bot caches almost every response (username to and from uuid queries), making the bot's responses much faster. </br>
+                · We now support almost every gamemode (21 currently). </br>
+                · The bot supports guild querying as well, making every user able to review guilds, guild members, guild GXP leaderboards, and last but not least, the option to compare two guilds! </br>
+                · Users are able to link their Discord Accounts (as long as they've linked it on Hypixel as well) to the bot, making the bot's responses even faster. </br>
+                · We allow users to customize the bot's prefix and ignored channels. These two commands are only enabled for whitelisted roles (yes, another command! this one can only be used by users with the ADMINISTRATOR permission) and users with the ADMIN premission. </br>
+                · There is an easy-to-use suggestion command which allows every user to report an error or send a suggestion with ease.
+                · Eye-catching and easy to read responses. </br> 
+              </p>
+            </article>
+
+						<!-- Contact -->
+							<article id="contact">
+                <h2 class="major">Support</h2>
+                <span class="image main"><img src="./images/HypixelBanner.png" alt="" /></span>
+                <p>
+                  You can reach out to me, whenever you need help with something, on:</br>
+                  · <a href="https://discord.com/invite/HjXB4HW">Bot's Discord Support server</a> </br>
+                  · The suggestion box <br/>
+                  · <a href="#">You can reply on the thread post</a>
+                  · If none of these were useful for you, add me on Discord: Arat#7539
+                </p>
+								
+								<ul class="icons">
+									<li><a href="https://discord.com/invite/HjXB4HW" class="icon brands fa-discord"><span class="label">Twitter</span></a></li>
+									<li><a href="https://twitter.com/aratgs03" class="icon brands fa-twitter"><span class="label">Facebook</span></a></li>
+									<!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li> -->
+								</ul>
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Hypixel Stats Bot. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
