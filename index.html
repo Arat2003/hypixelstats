@@ -20,21 +20,25 @@
 
 				<!-- Header -->
 					<header id="header">
-						<!-- <div class="logo">
-							<span class="icon fa-gem"></span>
-						</div> -->
+						<div class="logo">
+							<img src="./images/logo.png" height="85" width="85"></img>
+						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Hypixel Stats Bot</h1>
+								<h1>
+                  <a href = "https://discord.com/oauth2/authorize?client_id=720525129850814494&permissions=134605888&scope=bot">
+                    Hypixel Stats Bot
+                  </a>
+                </h1>
 								<p>An unofficial Hypixel stats bot that shows user's and guild's statistics and much more!</p>
 							</div>
 						</div>
 						<nav>
 							<ul>
-                <li><a href="#whyUs">Why us</a></li>
+                <li><a href="#whyus">Why us</a></li>
                 <li><a href="#commands">Commands</a></li>
                 <li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<li><a href="#support">Contact</a></li>
 							</ul>
 						</nav>
 					</header>
@@ -64,6 +68,21 @@
                         <td>h!<em>botstats</em></br>bs | botstat</td>
                       </tr>
                       <tr>
+                        <td>help</td>
+                        <td>Sends a list of all the commands</td>
+                        <td>h!<em>help</em></td>
+                      </tr>
+                      <tr>
+                        <td>invite</td>
+                        <td>Sends an invitation link to add the bot to your servers</td>
+                        <td>h!<em>invite</em></td>
+                      </tr>
+                      <tr>
+                        <td>nick</td>
+                        <td>Change your nickname in this server! (You must link your account to the bot first) Doesn\'t work with users who have got roles above this bot\'s role in the role hierarchy or server owners. Games supported at the moment: Guild Rank (guild), Network Level (network), Rank (rank) and BW (bw or bedwars).</td>
+                        <td>h!<em>nick</em> gamemode/guild rank</td>
+                      </tr>
+                      <tr>
                         <td>setprefix</td>
                         <td>Change the bot's prefix (works with whitelisted roles (check below) and users with ADMINISTRATOR permission.)</td>
                         <td>h!<em>setprefix</em> newprefix </br>prefix | setprefix</td>
@@ -79,29 +98,19 @@
                         <td>h!<em>whitelist</em> @role</td>
                       </tr>
                       <tr>
-                        <td>help</td>
-                        <td>Sends a list of all the commands</td>
-                        <td>h!<em>help</em></td>
-                      </tr>
-                      <tr>
                         <td>stats</td>
                         <td>Sends a list of all the Hypixel stats commands</td>
                         <td>h!<em>stats</em></td>
                       </tr>
                       <tr>
-                        <td>invite</td>
-                        <td>Sends an invitation link to add the bot to your servers</td>
-                        <td>h!<em>invite</em></td>
+                        <td>suggestion</td>
+                        <td>Send a suggestion or report an error you found!</td>
+                        <td>h!<em>suggestion</em> (SUGGESTION)</br>suggestion | suggest</td>
                       </tr>
                       <tr>
                         <td>support</td>
                         <td>Sends an invitation link to join the support server</td>
                         <td>h!<em>support</em></td>
-                      </tr>
-                      <tr>
-                        <td>suggestion</td>
-                        <td>Send a suggestion or report an error you found!</td>
-                        <td>h!<em>suggestion</em> (SUGGESTION)</br>suggestion | suggest</td>
                       </tr>
                       <tr>
                         <td>upvote</td>
@@ -122,6 +131,11 @@
                       </tr>
                     </thead>
                     <tbody>
+                      <tr>
+                        <td>achievement</td>
+                        <td>Generate a random achievement!</td>
+                        <td>h!<em>achievement</em> achievement description</td>
+                      </tr>
                       <tr>
                         <td>available</td>
                         <td>Checks if a username is already taken!</td>
@@ -187,6 +201,11 @@
                         <td>h!<em>guildcompare</em> guildname, guildname</br>guildcompare | gc</td>
                       </tr>
                       <tr>
+                        <td>list</td>
+                        <td>Get a guild's member list!</td>
+                        <td>h!<em>list</em> guildname (or -p username)</br>weekly</td>
+                      </tr>
+                      <tr>
                         <td>weekly</td>
                         <td>Guild's Weekly GXP Earners leaderboard</td>
                         <td>h!<em>weekly</em> guildname (or -p username)</br>weekly</td>
@@ -205,11 +224,6 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <!-- <tr>
-                        <td>available</td>
-                        <td>Checks if a username is already taken!</td>
-                        <td><em>h!</em>available username</td>
-                      </tr> -->
                       <tr>
                         <td>hypixel</td>
                         <td>Sends back user's network profile and guild member statistics</td>
@@ -228,6 +242,11 @@
                         <td>h!<em>arcade</em> username</br>arcade</td>
                       </tr>
                       <tr>
+                        <td>bedwars</td>
+                        <td>Player's Bedwars stats</td>
+                        <td>h!<em>bedwars</em> username</br>bw | bedwars | bedwar</td>
+                      </tr>
+                      <tr>
                         <td>blitz</td>
                         <td>Player's Blitz Survival Games stats</td>
                         <td>h!<em>hg</em> username</br>hg | blitz | hungergames</td>
@@ -236,11 +255,6 @@
                         <td>buildbattle</td>
                         <td>Player's Build Battle stats</td>
                         <td>h!<em>buildbattle</em> username</br>bb | buildbattle</td>
-                      </tr>
-                      <tr>
-                        <td>bedwars</td>
-                        <td>Player's Bedwars stats</td>
-                        <td>h!<em>bedwars</em> username</br>bw | bedwars | bedwar</td>
                       </tr>
                       <tr>
                         <td>copsncrims</td>
@@ -254,14 +268,15 @@
                       </tr>
                       <tr>
                         <td>duels</td>
-                        <td>Player's Overall Duels stats (see below for game-specific (WIP))</td>
-                        <td>h!<em>buildbattle</em> username</br>bb | buildbattle</td>
+                        <td>Player's Overall Duels stats (see below for game-specific)</td>
+                        <td>h!<em>duels</em> username</br>dd | duels | duelsProfile</td>
                       </tr>
-                      <!-- <tr>
+                      <tr>
                         <td>bridges</td>
-                        <td>Player's Build Battle stats</td>
-                        <td>h!<em>buildbattle</em> username</br>bb | buildbattle</td>
-                      </tr> overall, uhc, sw, megawalls, op, blitz, classic, bow, speed, combo, bridges, sumo -->
+                        <td>Player's Bridges</td>
+                        <td>h!<em>bridges</em> username</td>
+                      </tr> 
+                      <!-- // overall, uhc, sw, megawalls, op, blitz, classic, bow, speed, combo, bridges, sumo -->
                       <tr>
                         <td>megawalls</td>
                         <td>Player's Mega Walls stats</td>
@@ -298,6 +313,11 @@
                         <td>h!<em>skyclash</em> username</br>sc | skyclash</td>
                       </tr>
                       <tr>
+                        <td>skywars</td>
+                        <td>Player's Skywars stats</td>
+                        <td>h!<em>skywars</em> username</br>sw | skywars | skywar</td>
+                      </tr>
+                      <tr>
                         <td>smashheroes</td>
                         <td>Player's Super Smash Heroes stats</td>
                         <td>h!<em>smashheroes</em> username</br>sh | smashheroes</td>
@@ -306,11 +326,6 @@
                         <td>speeduhc</td>
                         <td>Player's Mega Walls stats</td>
                         <td>h!<em>speeduhc</em> username</br>speeduhc</td>
-                      </tr>
-                      <tr>
-                        <td>skywars</td>
-                        <td>Player's Skywars stats</td>
-                        <td>h!<em>skywars</em> username</br>sw | skywars | skywar</td>
                       </tr>
                       <tr>
                         <td>thepit</td>
@@ -349,31 +364,31 @@
               </article>
               
             <!-- Why Us -->
-            <article id="whyUs">
+            <article id="whyus">
               <h2 class="major">Why Hypixel Stats</h2>
               <span class="image main"><img src="./images/HypixelBanner.png" alt="" /></span>
               <p>
                 · Hypixel Stats has been developed on discord.js v12.2.0, which maximizes customizability, making it much easier to add new commands and debug others (in case there are errors). </br>
                 · The bot has been designed to be user-friendly, mainly focused on making numbers easier to see and shortening response times.</br>
                 · Our bot caches almost every response (username to and from uuid queries), making the bot's responses much faster. </br>
-                · We now support almost every gamemode (21 currently). </br>
+                · We now support almost every gamemode (currently 21). </br>
                 · The bot supports guild querying as well, making every user able to review guilds, guild members, guild GXP leaderboards, and last but not least, the option to compare two guilds! </br>
                 · Users are able to link their Discord Accounts (as long as they've linked it on Hypixel as well) to the bot, making the bot's responses even faster. </br>
                 · We allow users to customize the bot's prefix and ignored channels. These two commands are only enabled for whitelisted roles (yes, another command! this one can only be used by users with the ADMINISTRATOR permission) and users with the ADMIN premission. </br>
-                · There is an easy-to-use suggestion command which allows every user to report an error or send a suggestion with ease.
+                · There is an easy-to-use suggestion command which allows every user to report an error or send a suggestion with ease. <br/>
                 · Eye-catching and easy to read responses. </br> 
               </p>
             </article>
 
-						<!-- Contact -->
-							<article id="contact">
+						<!-- Support -->
+							<article id="support">
                 <h2 class="major">Support</h2>
                 <span class="image main"><img src="./images/HypixelBanner.png" alt="" /></span>
                 <p>
                   You can reach out to me, whenever you need help with something, on:</br>
                   · <a href="https://discord.com/invite/HjXB4HW">Bot's Discord Support server</a> </br>
                   · The suggestion box <br/>
-                  · <a href="#">You can reply on the thread post</a>
+                  · <a href="#">You can reply on the thread post</a> <br/>
                   · If none of these were useful for you, add me on Discord: Arat#7539
                 </p>
 								
